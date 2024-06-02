@@ -1,0 +1,67 @@
+What are firewalls for:
+1. Block unauthorized access: Prevent hackers from accessing your network and systems.
+2. Allow authorized access: Permit legitimate traffic to reach your network and systems.
+3. Hide internal IP addresses: Conceal internal IP addresses from external attackers.
+4. Protect network segments: Isolate sensitive areas of your network from less secure areas.
+5. Monitor traffic: Log and monitor network traffic for security and troubleshooting purposes.
+
+Why is the traffic served over HTTPS:
+
+1. Security: HTTPS encrypts the data in transit, making it difficult for attackers to intercept and read sensitive information, such as passwords, credit card numbers, and personal data.
+2. Trust: HTTPS provides a secure connection, indicating to users that the website is trustworthy and authentic.
+3. Privacy: Encrypting data in transit protects user privacy and maintains confidentiality.
+4. Authentication: HTTPS verifies the identity of the website, ensuring users are communicating with the intended server.
+
+Monitoring is used for:
+
+1. Performance tracking: Monitoring server and application performance to identify bottlenecks and optimize resources.
+2. Error detection: Identifying and alerting on errors, exceptions, and crashes to quickly resolve issues.
+3. Resource utilization: Tracking CPU, memory, disk usage, and other resource utilization to ensure efficient use.
+4. Security monitoring: Detecting potential security threats, such as unusual login attempts or data breaches.
+5. Uptime and availability: Ensuring servers and applications are available and accessible to user
+
+
+Monitoring tools collect data through various methods, including:
+
+1. Agents
+2. APIs
+3. Syslog
+4. SNMP
+5. WMI 
+6. Prometheus
+7. Logs
+8. Network packets
+9. SQL queries
+10. Cloud APIs
+
+To monitor your web server's QPS (Queries Per Second), follow these steps:
+
+1. Choose a monitoring tool
+2. Install the agent
+3. Configure the agent
+4. Set up dashboards and alerts
+5. Monitor QPS
+6. Analyze and optimize
+
+
+Here are the issues with this infrastructure:
+
+1. *Terminating SSL at the load balancer level*:
+    - Security risk: SSL termination at the load balancer means that traffic between the load balancer and backend servers is unencrypted, potentially exposing sensitive data.
+    - Performance impact: SSL termination can be computationally expensive, affecting load balancer performance.
+2. *Only one MySQL server capable of accepting writes*:
+    - Single point of failure (SPOF): If this server goes down, the entire application becomes unavailable for writes.
+    - Performance bottleneck: All writes are concentrated on a single server, potentially leading to slow queries and impacting application performance.
+3. *Servers with all the same components (database, web server, and application server)*:
+    - Lack of scalability: If one component requires scaling, the entire server must be scaled, leading to inefficient resource utilization.
+    - Security risk: If one component is compromised, the entire server is vulnerable.
+    - Maintenance challenges: Updating or patching one component can affect the entire server, leading to downtime and complexity.
+
+These issues can lead to performance, security, and availability problems in the infrastructure. It's recommended to address these issues by:
+
+1. Terminating SSL at the application server or using end-to-end encryption.
+2. Implementing a multi-node MySQL cluster or master-slave replication for writes.
+3. Separating components into dedicated servers or containers for better scalability, security, and maintainability.
+
+
+https://imgur.com/a/d631AWI
