@@ -1,0 +1,46 @@
+*What is a server
+A server is a general term that refers to a computer or device that provides services, resources, or data to other computers or devices over a network. It can be a file server, print server, database server, or any other type of server that provides a specific service.
+
+*What is the role of the domain name
+The role of domain name help the computer or server translate human readable to ip addrress which computer understand
+
+*What type of DNS record www is in www.foobar.com
+CNAME
+
+*What is the role of the web server
+A web server is a specific type of server that hosts and serves web content, such as websites, web applications, and APIs, over the HTTP or HTTPS protocol
+
+*What is the role of the application server
+**Executing application code
+**Processing requests
+*Interacting with the database
+**Generating responses
+**Handling business logic
+
+*What is the role of the database
+**Data Storage
+**Data Retrieval
+**Data Manipulation
+**Data Security
+**Data Analysis
+
+What is the server using to communicate with the computer of the user requesting the website
+**TCP/IP
+**HTTP
+
+
+You must be able to explain what the issues are with this infrastructure:
+
+1. *Single Point of Failure (SPOF)*: The web server and application server are both single points of failure. If either of them goes down, the entire website becomes unavailable. This means that if the web server needs to be restarted for maintenance or deployment of new code, the website will experience downtime.
+2. *Scalability limitations*: The current infrastructure is not designed to handle high traffic or sudden spikes in usage. If the website experiences a surge in popularity or traffic, the single web server and application server may become overwhelmed, leading to slow response times, errors, or even complete unavailability.
+
+To address these issues, consider implementing:
+
+1. *Load balancing*: Distribute incoming traffic across multiple web servers to ensure that no single server is overwhelmed.
+2. *Auto Scaling*: Automatically add or remove servers based on traffic demand to ensure the infrastructure can handle changes in usage.
+3. *Redundancy*: Implement redundant web servers and application servers to ensure that if one goes down, others can take its place.
+4. *Containerization or virtualization*: Use technologies like Docker or VMs to make deployment and management of new code easier, reducing downtime.
+5. *Cloud hosting*: Consider migrating to cloud hosting providers like AWS, Azure, or Google Cloud, which offer built-in scalability, redundancy, and load balancing capabilities.
+
+
+https://imgur.com/a/1tl5YAr
