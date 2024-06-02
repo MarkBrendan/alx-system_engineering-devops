@@ -1,0 +1,21 @@
+For every additional element, why you are adding it:
+i am adding it so as to improve scalability, Redundancy and to prevent Single Point of Failure
+
+What distribution algorithm your load balancer is configured with and how it works:
+Round Robin Scheduling: Requests are served by the server sequentially one after another. After sending the request to the last server, it starts from the first server again.
+
+Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both:
+1. Active-Passive
+
+2. Key differences:
+
+- Resource utilization: Active-Active utilizes all servers, while Active-Passive leaves some servers idle.
+- Scalability: Active-Active scales better, as all servers handle requests.
+- Failover: Active-Passive is designed for failover, while Active-Active requires additional configuration for failover.
+
+How a database Primary-Replica (Master-Slave) cluster works:
+1. Primary (Master): One database server acts as the primary source of truth, accepting writes and updates, Accepts write requests (INSERT, UPDATE, DELETE), - Processes transactions and updates data, - Logs changes to a transaction log
+
+2. Replica (Slave): One or more database servers replicate the primary's data, typically in real-time, - Connects to the primary and requests updates, - Receives transaction logs from the primary, - Applies logged changes to its own data, maintaining a identical cop, - Can handle read requests (SELECT), reducing load on the primary
+
+https://imgur.com/a/FxIXjQR
