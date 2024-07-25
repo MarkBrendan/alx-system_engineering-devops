@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Give me a page!
+
+echo "Hello Holberton" > /var/www/My_Domain/index.html
+ServerName localhost >> /etc/apache2/apache.conf
+
+service apache2 restart
